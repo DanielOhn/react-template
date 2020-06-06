@@ -1,6 +1,8 @@
 import React from "react"
 import "../styles/App.css"
 
+import DarkMode from "../components/DarkMode"
+
 function App() {
   return (
     <div className="App">
@@ -69,6 +71,8 @@ function App() {
         <a className="link" href="/">
           URL Color w/ no decorations
         </a>
+
+        <DarkMode />
       </div>
     </div>
   )

@@ -44,20 +44,33 @@ h3 {
 
 /* Font Color Options */
 .primary {
-  color: #092834;
+  color: var(--primary);
 }
 
 .secondary {
-  color: #1a3e4c;
+  color: var(--secondary);
 }
 
 .light {
-  color: #67afcb;
+  color: var(--light);
 }
 
 /* URLs and Links */
 
 .link {
-  color: #347b98;
+  color: var(--link);
   text-decoration: none;
+}
+
+/* Icon Buttons */
+
+.icon {
+  border: none;
+  background-color: transparent;
+  width: 64px;
+}
+
+.dark-mode {
+  display: flex;
+  justify-content: right;
 }
