@@ -23,19 +23,28 @@ function App() {
           <li>
             <a
               className="link"
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://www.w3schools.com/colors/colors_monochromatic.asp"
             >
               Monochromatic Colors
             </a>
           </li>
           <li>
-            <a className="link" href="https://www.typescriptlang.org/">
+            <a
+              className="link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.typescriptlang.org/"
+            >
               Typescript
             </a>
           </li>
           <li>
             <a
               className="link"
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://reacttraining.com/react-router/web/guides/quick-start"
             >
               React Router Dom
