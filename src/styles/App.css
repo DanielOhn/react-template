@@ -68,6 +68,7 @@ h3 {
   border: none;
   background-color: transparent;
   width: 64px;
+  fill: var(--link);
 }
 
 .dark-mode {

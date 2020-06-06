@@ -3,11 +3,7 @@ import React from "react"
 const SunIcon = (props) => {
   return (
     <button className="icon" onClick={props.onClick}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill={props.color}
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <g data-name="Layer 2">
           <g data-name="bulb">
             <rect

@@ -12,24 +12,20 @@ function DarkMode() {
   }
 
   useEffect(() => {
-    const getMode = localStorage.getItem("theme")
+    let getMode = localStorage.getItem("theme")
 
-    if (getMode === null) localStorage.setItem("theme", "light")
+    if (getMode === null) {
+      localStorage.setItem("theme", "light")
+      getMode = "light"
+    }
+
     setTheme(getMode)
     document.documentElement.setAttribute("data-user-color-scheme", getMode)
   }, [])
 
   return (
     <div className="dark-mode">
-      {theme === "light" ? (
-        <SunIcon
-          onClick={handleClick}
-          color="#496D1D
-        "
-        />
-      ) : (
-        <SunIcon onClick={handleClick} color="#092834" />
-      )}
+      <SunIcon onClick={handleClick} />
     </div>
   )
 }
