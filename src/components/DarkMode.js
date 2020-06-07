@@ -3,25 +3,19 @@ import React, { useState, useEffect } from "react"
 import SunIcon from "../icons/SunIcon"
 
 function DarkMode() {
-  const [theme, setTheme] = useState()
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light")
 
   function handleClick() {
-    theme === "light" ? setTheme("dark") : setTheme("light")
+    let newTheme = theme === "light" ? "dark" : "light"
+    setTheme(newTheme)
+
     localStorage.setItem("theme", theme)
     document.documentElement.setAttribute("data-user-color-scheme", theme)
   }
 
   useEffect(() => {
-    let getMode = localStorage.getItem("theme")
-
-    if (getMode === null) {
-      localStorage.setItem("theme", "light")
-      getMode = "light"
-    }
-
-    setTheme(getMode)
-    document.documentElement.setAttribute("data-user-color-scheme", getMode)
-  }, [])
+    document.documentElement.setAttribute("data-user-color-scheme", theme)
+  }, [theme])
 
   return (
     <div className="dark-mode">
